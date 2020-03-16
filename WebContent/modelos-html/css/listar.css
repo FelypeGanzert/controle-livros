@@ -1,0 +1,54 @@
+/* Lista de livros */
+
+#lista-livros.all-infos li {
+    display: flex;
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px transparent solid;
+    transition: border 0.3s ease-in-out;
+}
+#lista-livros.all-infos li:hover{
+    border: 1px #999 solid;
+}
+#lista-livros.all-infos li .autor,
+#lista-livros.all-infos li .pages {
+    color: var(--gray-color);
+}
+#lista-livros.all-infos li .pages,
+#lista-livros.all-infos li + div{
+    margin: 0px 15px;
+}
+#lista-livros.all-infos li div.progress{
+    position: relative;
+    height: 20px;
+    border: #00c9a7 solid 0.5px;
+    width: 250px;
+    top:0;
+    left: 0;
+    margin: 0px 10px;
+}
+#lista-livros.all-infos li .progress div{
+    height: 100%;
+    background: #00c9a7;
+    width: 70%;
+    transition: all 1s;
+}
+
+#lista-livros.all-infos li div.edit-remove{
+    margin-left: auto;
+}
+#lista-livros.all-infos li div.edit-remove i {
+    margin: 0px 10px;
+}
+#lista-livros.all-infos i.edit-livro{
+    color: var(--primary-color);
+}
+#lista-livros.all-infos i.remove-livro{
+    color: var(--red-color);
+}
+#lista-livros.all-infos div.edit-remove i:hover{
+    text-shadow: #999 2px 2px 5px;
+    cursor: pointer;
+}
