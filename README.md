@@ -23,4 +23,4 @@ Os conceitos que estou aplicando nesse projeto foram todos provenientes da apost
 7. USANDO	TAGLIBS
 8. TAGS	CUSTOMIZADAS	COM	TAGFILES
 
-Ainda restam 11 capítulos da apostila. Entretanto quis colocar o que foi aprendido até o momento em projeto desenvolvido por conta própria. Portanto acredito que certos caminhos adotados não sejam o melhor possível. Entretanto esse é o meu primeiro projeto Java WEB, dessa forma o seu intuito é mais ser uma fonte de aprendizagem. Logo mais pretendo ler os demais capítulos e melhorar ainda mais! 
+Ainda restam 11 capítulos da apostila. Entretanto quis colocar o que foi aprendido até o momento em um projeto desenvolvido por conta própria. Portanto acredito que certos caminhos adotados não sejam os melhores possíveis. Entretanto esse é o meu primeiro projeto Java WEB, dessa forma o intuito é mais ser uma fonte de aprendizagem. Logo mais pretendo ler os demais capítulos e melhorar ainda mais! 
