@@ -13,7 +13,7 @@
 - [ ] Excluir Livro
 
 ## Agradecimentos
-Os conceitos que estou aplicando nesse projeto foram todos provenientes da apostila da Caelum caelum-java-web-fj21. Eu até o momento somente até o capítulo 8:
+Os conceitos que estou aplicando nesse projeto foram todos provenientes da apostila da Caelum caelum-java-web-fj21. Até o momento de início desse projeto, eu li somente até o capítulo 8:
 1. ENFRENTANDO	O	JAVA	NA	WEB
 2. BANCOS	DE	DADOS	E	JDBC
 3. O	QUE	É	JAVA	EE?
