@@ -59,14 +59,3 @@ form#cadastrar-livro button[type='submit']:hover{
     box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.1); 
 }
 
-@media(max-width: 700px) {
-    form#cadastrar-livro {
-        grid-template-areas:
-            'titulo titulo'
-            'autor autor'
-            'paginas pagina-atual'
-            'url-img url-img'
-            'buttons buttons'
-        ;
-    }
-}

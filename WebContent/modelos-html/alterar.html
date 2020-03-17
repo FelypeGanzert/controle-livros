@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="css/mobile.css">
     <script src="https://kit.fontawesome.com/088ed5f28c.js" crossorigin="anonymous"></script>
     <title>Cadastrar Livros</title>
+    <style>
+        form#cadastrar-livro button[type='submit']{
+            background: var(--secondary-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -23,8 +28,8 @@
             </div>
             <div id="main-menu">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="cadastrar.html" class="active">Cadastrar</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="cadastrar.html">Cadastrar</a></li>
                     <li><a href="lista.html">Listar</a></li>
                 </ul>
             </div>
@@ -63,7 +68,7 @@
             </div>
 
             <div class="buttons-group" id="container-buttons">
-                <button type="submit">Cadastrar</button>
+                <button type="submit">Alterar</button>
             </div>
         </form>
     </div>

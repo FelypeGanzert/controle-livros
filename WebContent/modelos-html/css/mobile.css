@@ -1,0 +1,126 @@
+@media(max-width: 700px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* Navbar menu */
+    nav#main-nav #main-menu{
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 5px;
+        background: #fff;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+    }
+    /* Create the lines */
+    nav#main-nav #main-menu:after,
+    nav#main-nav #main-menu:before{
+        z-index: 2;
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        position: absolute;
+        transition: transform 0.4s ease-in-out;
+    }
+    nav#main-nav #main-menu:after{
+        transform: translateY(-10px);
+    }
+    nav#main-nav #main-menu:before{
+        transform: translateY(10px);
+    }
+    /* What will happen when the menu is showing */
+    nav#main-nav #main-menu.show{
+        background: transparent;
+    }
+    nav#main-nav #main-menu.show:after{
+        transform: rotate(45deg);
+    }
+    nav#main-nav #main-menu.show:before{
+        transform: rotate(-45deg);
+    }
+    nav#main-nav #main-menu ul{
+        width: 100vw;
+        height: 100vh;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(100vh);
+        transition: transform 0.4s ease-in-out;
+        opacity: 0;
+    }
+    nav#main-nav #main-menu ul li{
+        margin: 10px 0px;
+        font-size: 1.2rem;
+    }
+    /* Adjust the position of the menu */
+    nav#main-nav #main-menu.show{
+        z-index: 2;
+        top: 10;
+        left: 10;
+    }
+    nav#main-nav #main-menu.show ul{
+        opacity: 0.93;
+        transform: translateX(0);
+    }
+    nav#main-nav #main-menu a.active{
+        background: var(--midle-color);
+        color: #333;
+    }
+
+    /* About section */
+    section#about{
+        height: auto;
+        display: block;
+        padding: 20px 0px;
+    }
+    section#about div.img-computer{
+        display: none;
+    }
+
+    /* Form Cadastro Livros */
+    form#cadastrar-livro {
+        grid-template-areas:
+            'titulo titulo'
+            'autor autor'
+            'paginas pagina-atual'
+            'url-img url-img'
+            'buttons buttons'
+        ;
+    }
+
+    /* List of books */
+    #lista-livros.all-infos li div.progress{
+        display: none;
+    }
+
+    #lista-livros.all-infos li .title{
+        display: flex;
+        flex-direction: column;
+    }
+    #lista-livros.all-infos li .title span{
+        display: block;
+        margin: 5px 0px;
+    }
+
+    #lista-livros.all-infos li .pages,.title,
+    #lista-livros.all-infos li + div,
+    #lista-livros.all-infos li div.edit-remove i {
+        margin: 0px 3px;
+    }
+
+
+    #lista-livros.all-infos li {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2px;
+        align-items: center;
+        border-bottom: 1px #999 dotted;
+    }
+}

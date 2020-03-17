@@ -62,7 +62,7 @@ nav#main-nav .container{
 nav#main-nav h1{
     margin: 0;
 }
-nav#main-nav #main-menu{
+nav#main-nav #main-menu ul{
     display: flex;
 }
 nav#main-nav #main-menu a{
