@@ -9,8 +9,8 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-			return DriverManager.getConnection("jdbc:mysql://localhost:3306/livrosdb?useTimezone=true&serverTimezone=UTC",
-					"student", "student");
+			return DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/livrosdb?useTimezone=true&serverTimezone=UTC", "student", "student");
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
