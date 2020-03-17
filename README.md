@@ -12,7 +12,7 @@
 - [x] Editar Livro Existente
 - [x] Excluir Livro
    
-   Melhorias
+   Melhorias:
 - [ ] Adicionar URL da capa no DB e nas regras de negócio
 - [ ] Permitir outro modo de exibição dos livros (somente capa e título)
 
