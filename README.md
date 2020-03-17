@@ -4,7 +4,7 @@
 ## Status
 - [x] Conexão com o Banco de Dados através do JDBC
 - [x] Implementação das regras para adicionar, editar e remover livros no LivroDao
-- [ ] Desenvolvimento do FrontEnd (UI)
+- [x] Desenvolvimento do FrontEnd (UI)
    
    Regras de Negócio:
 - [ ] Listagem dos livros cadastrados
