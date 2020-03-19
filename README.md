@@ -7,10 +7,15 @@
 - [x] Desenvolvimento do FrontEnd (UI)
    
    Regras de Negócio:
-- [ ] Listagem dos livros cadastrados
-- [ ] Cadastrar novo livro
-- [ ] Editar Livro Existente
-- [ ] Excluir Livro
+- [x] Listagem dos livros cadastrados
+- [x] Cadastrar novo livro
+- [x] Editar Livro Existente
+- [x] Excluir Livro
+   
+   Melhorias:
+- [ ] Adicionar URL da capa no DB e nas regras de negócio
+- [ ] Permitir outro modo de exibição dos livros (somente capa e título)
+
 
 ## Agradecimentos
 Os conceitos que estou aplicando nesse projeto foram todos provenientes da apostila da Caelum caelum-java-web-fj21. Até o momento de início desse projeto, eu li somente até o capítulo 8:
