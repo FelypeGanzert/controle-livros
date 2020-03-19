@@ -42,6 +42,13 @@ public class AlterarLivro extends HttpServlet {
 			} catch (Exception e) {
 				paginaAtual = 0;
 			}
+			
+			String urlImage;
+			try {
+				urlImage = request.getParameter("url-image");
+			} catch (Exception e) {
+				urlImage = "./img/flowers.jpg";
+			}
 
 			// monta um objeto livro
 			Livro livro = new Livro();
@@ -50,6 +57,7 @@ public class AlterarLivro extends HttpServlet {
 			livro.setAutor(autor);
 			livro.setTotalPaginas(paginas);
 			livro.setPaginasLidas(paginaAtual);
+			livro.setUrlImage(urlImage);
 
 			// Altera o Livro
 			dao.altera(livro);

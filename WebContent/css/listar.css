@@ -9,6 +9,7 @@
     border: 1px transparent solid;
     transition: border 0.3s ease-in-out;
     align-items: center;
+    background-size: 0%;
 }
 #lista-livros .title{
 	flex-basis: 230px;
@@ -64,3 +65,102 @@
     text-shadow: #999 2px 2px 5px;
     cursor: pointer;
 }
+
+/* Change View div */
+div#view {
+	display: flex;;
+	justify-content: flex-end;
+	width: 100%;
+	margin: 10px;
+}
+div#view button#btn-view {
+	display: inline-block;
+	width: auto;
+	margin: 0px 15px;
+	border: none;
+	background: var(--secondary-color);
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	transtion: all 0.4s ease-in-out;
+}
+div#view button#btn-view:hover{
+	opacity: 0.9;
+}
+
+/* show-cover viewer */
+#lista-livros.all-infos.show-cover{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+	justify-items: center;
+}
+
+#lista-livros.all-infos.show-cover  li{
+  padding: 0px;
+  height: 300px;
+  max-width: 250px;
+  min-width: 200px;
+  border: solid 1px #999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  text-shadow: #333 2px 2px 2px;
+  animation: show 1s;
+  transition: box-shadow 0.5s ease-in-out;
+}
+@keyframes show{
+	from{transform: scale(0);}
+	to{transform: scale(1);}
+}
+#lista-livros.all-infos.show-cover li > div{
+  margin: 0px;
+  width: 100%;
+  padding: 5px;
+  flex-basis: auto;
+}
+#lista-livros.all-infos.show-cover li  div.progress {
+  padding: 0;
+  margin: 0;
+  height: 7px;
+  width: 100%;
+  background: #fff;
+}
+
+#lista-livros.all-infos.show-cover li .title{
+  background: rgba(0, 0, 0, 0.7);
+}
+#lista-livros.all-infos.show-cover li .title .titulo {
+  font-size: 1rem;
+}
+#lista-livros.all-infos.show-cover li .autor{
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+#lista-livros.all-infos.show-cover li .pages{
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+}
+
+#lista-livros.all-infos.show-cover li .edit-remove{
+  text-align: center;
+  background: #fff;
+}
+#lista-livros.all-infos.show-cover li .edit-remove i{
+  text-shadow: none;
+}
+#lista-livros.all-infos.show-cover li .edit-remove i:hover{
+  opacity: 0.8;
+}
+#lista-livros.all-infos.show-cover li .title span{
+  display: block;
+  margin: 2px;
+}
+

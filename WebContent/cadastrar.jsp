@@ -43,7 +43,7 @@
 
 			<div class="input-group" id="container-titulo">
 				<label for="titulo">Título</label> <input type="text" name="titulo"
-					id="titulo" autocomplete="off" required="">
+					id="titulo" autocomplete="off" required="" autofocus>
 			</div>
 
 			<div class="input-group" id="container-autor">
@@ -62,8 +62,8 @@
 			</div>
 
 			<div class="input-group" id="container-url-img">
-				<label for="uel-img">URL da Capa</label> <input type="text"
-					name="uel-img" id="uel-img" autocomplete="off">
+				<label for="url-image">URL da Capa</label> <input type="text"
+					name="url-image" id="url-image" autocomplete="off">
 			</div>
 
 			<div class="buttons-group" id="container-buttons">

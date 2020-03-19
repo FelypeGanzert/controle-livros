@@ -41,6 +41,13 @@ public class CadastrarLivro extends HttpServlet {
 			} catch (Exception e) {
 				paginaAtual = 0;
 			}
+			
+			String urlImage;
+			try {
+				urlImage = request.getParameter("url-image");
+			} catch (Exception e) {
+				urlImage = "./flowers.jpg";
+			}
 
 			// monta um objeto livro
 			Livro livro = new Livro();
@@ -48,6 +55,7 @@ public class CadastrarLivro extends HttpServlet {
 			livro.setAutor(autor);
 			livro.setTotalPaginas(paginas);
 			livro.setPaginasLidas(paginaAtual);
+			livro.setUrlImage(urlImage);
 
 			// Salva o Livro
 			dao.adiciona(livro);

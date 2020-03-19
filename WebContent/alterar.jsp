@@ -48,8 +48,8 @@
 			</div>
 
 			<div class="input-group" id="container-url-img">
-				<label for="uel-img">URL da Capa</label> <input type="text"
-					name="uel-img" id="uel-img" autocomplete="off">
+				<label for="url-image">URL da Capa</label> <input type="text"
+					name="url-image" id="url-image" autocomplete="off" value="${param.urlImage}">
 			</div>
 
 			<div class="buttons-group" id="container-buttons">

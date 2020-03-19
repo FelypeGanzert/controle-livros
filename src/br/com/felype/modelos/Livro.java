@@ -7,6 +7,7 @@ public class Livro {
 	private String autor;
 	private int totalPaginas;
 	private int paginasLidas;
+	private String urlImage;
 
 	public Livro() {
 	}
@@ -65,10 +66,18 @@ public class Livro {
 		this.paginasLidas = paginasLidas;
 	}
 	
+	public String getUrlImage() {
+		return urlImage;
+	}
+	public void setUrlImage(String urlImage) {
+		this.urlImage = urlImage;
+	}
+	
 	public String toString() {
 		return "Id: "+ getId() + ", Titulo: " + getTitulo() +
 				", Autor: " + getAutor() +
 				", Páginas: " + getTotalPaginas() +
-				", Lidas: " + getPaginasLidas();
+				", Lidas: " + getPaginasLidas() +
+				", Image: " + getUrlImage();
 	}
 }

@@ -30,8 +30,7 @@ public class LivroDao {
 
 	// Adiciona o livro no DB
 	public void adiciona(Livro livro) {
-		String sql = "insert into livros " + "(titulo, autor, totalPaginas, paginasLidas)"
-				+ " values (?, ?, ?, ?)";
+		String sql = "insert into livros " + "(titulo, autor, totalPaginas, paginasLidas, urlImage)" + " values (?, ?, ?, ?, ?)";
 		try {
 			// prepared statement para inserir
 			PreparedStatement stmt = connection.prepareStatement(sql);
@@ -57,6 +56,14 @@ public class LivroDao {
 				stmt.setNull(4, Types.INTEGER);
 			}
 
+			// Verifica se há algo na url
+			try {
+				stmt.setString(5, livro.getUrlImage());
+			} catch (NullPointerException e) {
+				System.out.println("Não informado url da Image");
+				stmt.setNull(5, Types.INTEGER);
+			}
+
 			// executa
 			stmt.execute();
 			stmt.close();
@@ -80,6 +87,7 @@ public class LivroDao {
 				livro.setAutor(rs.getString("autor"));
 				livro.setTotalPaginas(rs.getInt("totalPaginas"));
 				livro.setPaginasLidas(rs.getInt("paginasLidas"));
+				livro.setUrlImage(rs.getString("urlImage"));
 
 				// adicionando o objeto à lista
 				livros.add(livro);
@@ -94,17 +102,18 @@ public class LivroDao {
 
 	// Altera um livro usando o id como parâmetro
 	public void altera(Livro livro) {
-		String sql = "update livros set titulo=?, autor=?, totalPaginas=?,"
-				+ "paginasLidas=? where id=?";
+		String sql = "update livros set titulo=?, autor=?, totalPaginas=?," + "paginasLidas=?, urlImage=? where id=?";
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 
 			// seta os valores
+			System.out.println(livro);
 			stmt.setString(1, livro.getTitulo());
 			stmt.setString(2, livro.getAutor());
 			stmt.setInt(3, livro.getTotalPaginas());
 			stmt.setInt(4, livro.getPaginasLidas());
-			stmt.setInt(5, livro.getId());
+			stmt.setString(5, livro.getUrlImage());
+			stmt.setInt(6, livro.getId());
 
 			stmt.execute();
 			stmt.close();

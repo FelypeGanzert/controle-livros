@@ -29,22 +29,27 @@
 	<div class="container">
 		<c:choose>
 			<c:when test="${param.resp == 'sucess'}">
-				<div class="sucess">${param.titulo} alterado com sucesso.</div>
+				<div class="sucess">${param.titulo}alterado com sucesso.</div>
 			</c:when>
 
 			<c:when test="${param.resp == 'failure'}">
 				<div class="failure">Desculpe, houve um erro durante a
 					alteração.</div>
 			</c:when>
-			
+
 		</c:choose>
 		<h2>Livros Cadastrados</h2>
+		<div id="view">
+			<button id="btn-view">Mudar modo de exibição</button>
+		</div>
 		<ul id="lista-livros" class="all-infos">
 
 			<!--  percorre os contatos montando as linhas da tabela -->
 			<c:forEach var="livro" items="${dao.lista}">
 
-				<li><input type="hidden" class="id" value="${livro.id}">
+				<li style="background-image: url('${livro.urlImage}');"><input
+					type="hidden" class="id" value="${livro.id}"> <input
+					type="hidden" class="url" value="${livro.urlImage}">
 					<div class="title">
 						<span class="titulo">${livro.titulo}</span><span class="autor">${livro.autor}</span>
 					</div>
@@ -79,6 +84,7 @@
 				let autor = UIli.querySelector('.autor').innerText;
 				let paginas = UIli.querySelector('.paginas').innerText;
 				let paginaAtual = UIli.querySelector('.pagina-atual').innerText;
+				let urlImage = UIli.querySelector('.url').value;
 
 				// Cria o formulari para envio
 				const form = document.createElement('form');
@@ -112,8 +118,14 @@
 				let paginaAtualField = document.createElement('input');
 				paginaAtualField.type = 'hidden';
 				paginaAtualField.name = 'paginaAtual';
-				paginaAtualField.value = paginaAtual
+				paginaAtualField.value = paginaAtual;
 				form.appendChild(paginaAtualField);
+				
+				let urlImageField = document.createElement('input');
+				urlImageField.type = 'hidden';
+				urlImageField.name = 'urlImage';
+				urlImageField.value = urlImage;
+				form.appendChild(urlImageField);
 
 				document.body.appendChild(form);
 				form.submit();
@@ -140,6 +152,7 @@
 					form.submit();
 				}
 			}
+			
 		})
 	</script>
 	<c:import url="rodape.jsp"></c:import>
