@@ -53,6 +53,9 @@ nav#main-nav {
     top: 0;
     z-index: 2;
 }
+nav#main-nav a{
+	color: #fff;
+}
 
 nav#main-nav .container{
     display: flex;
