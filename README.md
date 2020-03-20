@@ -13,8 +13,9 @@
 - [x] Excluir Livro
    
    Melhorias:
-- [ ] Adicionar URL da capa no DB e nas regras de negócio
-- [ ] Permitir outro modo de exibição dos livros (somente capa e título)
+- [x] Adicionar URL da capa no DB e nas regras de negócio
+- [x] Permitir outro modo de exibição dos livros (somente capa e título)
+- [ ] Adicionar caixa de pesquisa para filtrar os livros por título
 
 
 ## Agradecimentos
