@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,7 +30,7 @@
 	<div class="container">
 		<c:choose>
 			<c:when test="${param.resp == 'sucess'}">
-				<div class="sucess">${param.titulo}alterado com sucesso.</div>
+				<div class="sucess">${param.titulo}alteradocomsucesso.</div>
 			</c:when>
 
 			<c:when test="${param.resp == 'failure'}">
@@ -38,9 +39,13 @@
 			</c:when>
 
 		</c:choose>
-		<h2>Livros Cadastrados</h2>
+		<h2>Livros Cadastrados: ${fn:length(dao.lista)}</h2>
 		<div id="view">
-			<button id="btn-view">Mudar modo de exibição</button>
+			<div id="search">
+				<input type="text" autocomplete="off" id="pesquisa" name="pesquisa"
+					placeholder="Filtre por título"> <label for="pesquisa">Filtrar</label>
+			</div>
+			<button id="btn-view">Mudar exibição</button>
 		</div>
 		<ul id="lista-livros" class="all-infos">
 
@@ -74,6 +79,7 @@
 
 	<!--  Script JS para capturar o evento de editar e excluir um livro -->
 	<script>
+		let livros = null;
 		const UIlistaLivros = document.querySelector('#lista-livros');
 		UIlistaLivros.addEventListener('click', e => {
 			e.preventDefault();
@@ -86,7 +92,7 @@
 				let paginaAtual = UIli.querySelector('.pagina-atual').innerText;
 				let urlImage = UIli.querySelector('.url').value;
 
-				// Cria o formulari para envio
+				// Cria o formulario para envio
 				const form = document.createElement('form');
 				form.method = 'POST';
 				form.action = 'alterar.jsp';
@@ -154,6 +160,7 @@
 			}
 			
 		})
+		
 	</script>
 	<c:import url="rodape.jsp"></c:import>
 </body>

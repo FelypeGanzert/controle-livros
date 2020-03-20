@@ -69,9 +69,35 @@
 /* Change View div */
 div#view {
 	display: flex;;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
 	margin: 10px;
+}
+div#view #search {
+	position: relative;
+	width: 200px;
+}
+div#view #search label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 10px;
+    background: #fff;
+    pointer-events: none;
+    transform: translate(10%, -60%);
+    color: var(--secondary-color)
+}
+
+div#view #pesquisa{
+	width: 100%;
+}
+div#view #pesquisa:focus{
+    border-color: var(--secondary-color);
+}
+div#view #pesquisa:after{
+	content: 'Filtrar';
+	display: block;
 }
 div#view button#btn-view {
 	display: inline-block;
