@@ -7,10 +7,15 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 
 	public Connection getConnection() {
+		
+		String url = "jdbc:mysql://localhost:3306/livrosdb?useTimezone=true&serverTimezone=UTC";
+		String user = "student";
+		String password = "student";
+				
+		
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-			return DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/livrosdb?useTimezone=true&serverTimezone=UTC", "student", "student");
+			return DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
