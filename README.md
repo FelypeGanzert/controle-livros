@@ -1,6 +1,10 @@
 # Controle-livros
  Sistema de controle pessoal para cadastro de Livros, utilizando Servlets, JSP e Taglibs.
 
+## O que é possível fazer
+O úsuario pode estar cadastrando livros, bem como editando e removendo os mesmos. A informações solicitadas no cadastrado do livro são: título, autor, total de páginas, páginas lidas, url da imagem de capa, sendo somente os dois primeiros itens obrigatórios.
+Ainda é possível através da página de listar todos os livros utilizar uma caixa de pesquisa para filtrar por título os livros e até mesmo alterar entre dois modos de exibição diferentes.
+
 ## Status
 - [x] Conexão com o Banco de Dados através do JDBC
 - [x] Implementação das regras para adicionar, editar e remover livros no LivroDao
@@ -15,7 +19,7 @@
    Melhorias:
 - [x] Adicionar URL da capa no DB e nas regras de negócio
 - [x] Permitir outro modo de exibição dos livros (somente capa e título)
-- [ ] Adicionar caixa de pesquisa para filtrar os livros por título
+- [x] Adicionar caixa de pesquisa para filtrar os livros por título
 
 
 ## Agradecimentos
