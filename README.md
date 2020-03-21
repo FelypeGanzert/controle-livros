@@ -2,7 +2,7 @@
  Sistema de controle pessoal para cadastro de Livros, utilizando Servlets, JSP e Taglibs.
  
 ## Visualizar
-Para ter uma ídeia como ficou a interface do projeto, você pode acessar:
+Para ter uma ídeia de como ficou a interface do projeto, você pode acessar:
 https://www.youtube.com/watch?v=cuVTQdFCdKQ
 
 ## O que é possível fazer
