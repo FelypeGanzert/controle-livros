@@ -1,5 +1,9 @@
 # Controle-livros
  Sistema de controle pessoal para cadastro de Livros, utilizando Servlets, JSP e Taglibs.
+ 
+## Visualizar
+Para ter uma ídeia como ficou a interface do projeto, você pode acessar:
+https://www.youtube.com/watch?v=cuVTQdFCdKQ
 
 ## O que é possível fazer
 O úsuario pode estar cadastrando livros, bem como editando e removendo os mesmos. A informações solicitadas no cadastrado do livro são: título, autor, total de páginas, páginas lidas, url da imagem de capa, sendo somente os dois primeiros itens obrigatórios.
